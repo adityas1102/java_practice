@@ -1,7 +1,10 @@
+
+
 public class pattern {
     public static void main(String[] args) {
-        int n = 4;
+        int n = 5;
         // int m = 5;
+        // int number = 1;
 
         //outter forloop  
         // for(int i=1; i<=n; i++){
@@ -57,13 +60,43 @@ public class pattern {
         // }
 
         //Half Paramid with number
-        for(int i=1; i<=n; i++){
-            for(int j=1; j<=i; j++){
+    //     for(int i=1; i<=n; i++){
+    //         for(int j=1; j<=i; j++){
+    //          System.out.print(j+" ");
+    //         }
+    //         System.out.println();    
+    //     }
 
-                System.out.print(j+" ");
-            }
-            System.out.println();
+            //inverted half paramid with numbers
+            // for(int i=1; i<=n; i++){
+            //     for(int j=1; j<=n-i+1; j++){
+            //         System.out.print(j);
+            //     }
+            //     System.out.println();
+            // }
+
             
-        }
+            //floyds triangle
+            // for(int i=1; i<=n; i++){
+            //     for(int j=1; j<=i; j++){
+            //         System.out.print(number+" ");
+            //         number++;
+            //     }
+            //     System.out.println();
+            // }
+
+            //  0-1 triangle
+            for(int i=1; i<=n; i++){
+                for(int j=1; j<=i; j++){
+                    int sum = i+j;
+                    if(sum % 2 == 0){
+                        System.out.print("1 ");
+                    }else{
+                        System.out.print("0 ");
+                    }
+                }
+                System.out.println();
+            }
+
     }
 }
