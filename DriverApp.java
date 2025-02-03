@@ -1,29 +1,25 @@
-package javaday1;
+package javaday5;
 
 public class DriverApp {
 
 	public static void main(String[] args) {
+		Student s1=new Student();  //default constructor
+		s1.displayStudent();
 		
-		Student.displayPrincipalName();
-		Student s1=new Student();
 		Student s2=new Student();
 		Student s3=new Student();
 		
-		s1.acceptStudent();
-		s2.acceptStudent();
-		s3.acceptStudent();
-//		s1.rno
-//		s3.displayStudent();
-		s1.displayStudent();
 		s2.displayStudent();
+		s3.displayStudent();
+		Student s4=new Student(18,"Virat",78.5,true);
+		s4.displayStudent();
 		
-		test();
+		Student s5=new Student(45,"Smriti",true,88.5);
+		s5.displayStudent();
 		
-	}
-	
-	static void test()
-	{
-		
+//		Student s6=new Student(s5);
+//		s6.displayStudent();
+
 	}
 
 }

@@ -1,87 +1,57 @@
-package javaday1;
-
-import java.util.Scanner;
+package javaday5;
 
 public class Student {
 
-		private int rno;				//instance scope
-		private String studentName;     //instance 
-		private String motherName;      //instance
-		private double percentage;      //instance
-		private static String principalName="Smith";    //static scope
-		
-		public void acceptStudent()
-		{
-			int z;  //local scope
-			Scanner sc=new Scanner(System.in);
-			System.out.println("Enter rno");  //103
-			this.rno=sc.nextInt();
-			System.out.println("Enter Student name"); //Chris
-			this.studentName=sc.next();
-			System.out.println("Enter Student Mother Name"); //Christina
-			this.motherName=sc.next();
-			System.out.println("Enter Student Percentage");  //98.5
-			this.percentage=sc.nextDouble();
-		}
-		
-		public void displayStudent()
-		{	
-			System.out.println("Rno is "+this.rno);
-			System.out.println("Student Name  is "+this.studentName);
-			System.out.println("Mother Name  is "+this.motherName);
-			System.out.println("Percentage  is "+this.percentage);	
-		}
+	private int rno;
+	private String sname;
+	private double per;
+	private boolean isPnrActive;
+	public Student() {}
+//	public Student()  //No Args Constructor - Non Parameterise constructor
+//	{
+//		this.rno=1;
+//		this.sname="Alice";
+//		this.per=40.0;
+//		this.isPnrActive=true;
+//	}
+	
+//	public Student(int a,String b,double c, boolean d)  //All Args Constructor - Parameterise constructor
+//	{
+//		this.rno=a;
+//		this.sname=b;
+//		this.per=c;
+//		this.isPnrActive=d;
+//	}
+//	
+	public Student(int a,String b,boolean d,double c)  //All Args Constructor - Parameterise constructor
+	{
+		this.rno=a;
+		this.sname=b;
+		this.per=c;
+		this.isPnrActive=d;
+	}
+	
+	
+//	public Student(Student st)  //Copy Constructor
+//	{
+//		this.rno=st.rno;
+//		this.sname=st.sname;
+//		this.per=st.per;
+//		this.isPnrActive=st.isPnrActive;
+//	}
+	
+	public Student(int rno, String sname, double per, boolean isPnrActive) {
+	this.rno = rno;
+	this.sname = sname;
+	this.per = per;
+	this.isPnrActive = isPnrActive;
+}
 
-		public static void displayPrincipalName()
-		{
-			System.out.println("Principal Name is "+ Student.principalName);
-		}
-		public int search(int z)  //this.rno=101 z=102
-		{
-			if(this.rno==z)
-				return 1;
-			else 
-				return -1;
-		}
-
-		public int search(String searchName) {
-			if(this.studentName.equals(searchName))
-				return 1;
-			else 
-				return -1;
-		}
-
-		public int getRno() {
-			return rno;
-		}
-
-		public void setRno(int rno) {
-			this.rno = rno;
-		}
-
-		public String getStudentName() {
-			return studentName;
-		}
-
-		public void setStudentName(String studentName) {
-			this.studentName = studentName;
-		}
-
-		public String getMotherName() {
-			return motherName;
-		}
-
-		public void setMotherName(String motherName) {
-			this.motherName = motherName;
-		}
-
-		public double getPercentage() {
-			return percentage;
-		}
-
-		public void setPercentage(double percentage) {
-			this.percentage = percentage;
-		}
-		
-		
+	public void displayStudent()
+	{
+		System.out.println("Rno is "+this.rno);
+		System.out.println("Name is "+this.sname);
+		System.out.println("Per is "+this.per);
+		System.out.println("Pnr Active status is "+this.isPnrActive);
+	}
 }
